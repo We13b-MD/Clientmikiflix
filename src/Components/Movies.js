@@ -11,7 +11,7 @@ import movieObject from "./movielist";
 function Movies({ movie }) {
   const { addBookmark } = useSharecontext();
   const navigate = useNavigate();
-  const baseUrl = "http://localhost:5000/api/movies/";
+  const baseUrl = "https://mymovieapplication-1ecd9fc8f5ab.herokuapp.com/api/movies/";
   const [searchQuery, setSearchQuery] = useState("");
   const [searchResults, setSearchResults] = useState([]);
   const [data, setData] = useState({});
@@ -30,7 +30,7 @@ function Movies({ movie }) {
   const handleSearch = async (e) => {
     try {
       const response = await axios.get(
-        `http://localhost:5000/api/movies/search?q=${searchQuery}`
+        `https://mymovieapplication-1ecd9fc8f5ab.herokuapp.com/api/movies/search?q=${searchQuery}`
       );
       setSearchResults(response.data);
       if (response.data.length > 0) {
@@ -51,7 +51,7 @@ function Movies({ movie }) {
   }
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/movies")
+    fetch("https://mymovieapplication-1ecd9fc8f5ab.herokuapp.com/api/movies")
       .then((response) => {
         if (!response.ok) {
           throw new Error("Data fetching failed");
@@ -96,17 +96,7 @@ function Movies({ movie }) {
     }
   };
 
-  useEffect(()=>{
-    const gridStyle = adjustgridForChrome()
-    
-    const gridContainer = document.querySelector('.grid-container')
-    if(gridContainer){
-      gridContainer.style = gridStyle;
-    }
-
   
-  }, [])
-
   return (
     <>
       {isloading ? (
