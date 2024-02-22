@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import {adjustgridForChrome } from '../Browsercompatibility/browserUtil'
 import { FaShare, FaBookmark, FaSearch } from "react-icons/fa";
 import 'normalize.css';
 import "../Cssfiles/movie.css";
