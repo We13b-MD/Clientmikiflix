@@ -28,7 +28,7 @@ function Movies({ movie }) {
   // Search functionality
   const handleSearch = async (e) => {
     try {
-      const response = await axios.get(
+      const response = await fetch(
         `https://mymovieapplication-1ecd9fc8f5ab.herokuapp.com/api/movies/search?q=${searchQuery}`
       );
       setSearchResults(response.data);
