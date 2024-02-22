@@ -24,7 +24,7 @@ function Login() {
     setIsloading(true);
 
     try {
-      const response = await fetch("http://localhost:5000/login", {
+      const response = await fetch("https://mymovieapplication-1ecd9fc8f5ab.herokuapp.com/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -71,7 +71,7 @@ function Login() {
       const userData = { googleId, email, name };
 
       const serverResponse = await fetch(
-        "http://localhost:5000/auth/google/callback",
+        "https://mymovieapplication-1ecd9fc8f5ab.herokuapp.com/auth/google/callback",
         {
           method: "POST",
           headers: {
