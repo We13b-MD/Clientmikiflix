@@ -1,0 +1,310 @@
+
+
+
+
+.movies {
+  width: 360px;
+  height: 440px;
+  margin-left: 40px;
+  margin-top: 120px;
+}
+
+.grid-container {
+  
+  margin-top: 100px;
+  display: grid ;
+  grid-template-columns: repeat(4, 1fr) ;
+  gap: 10px;
+ 
+}
+
+
+
+.grid-item {
+  -webkit-width: 100%;
+  -webkit-height: auto;
+  width: 100%;
+  height: auto;
+}
+
+.grid-item img {
+  -webkit-width: 100%;
+  -webkit-height: auto;
+  -webkit-display: block;
+  -webkit-max-width: 100%;
+  -webkit-max-height: 100%;
+  width: 100%;
+  height: auto;
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.Goback {
+  display: flex;
+  align-items: flex-end;
+  margin-left: 1000px;
+  text-decoration: none;
+  gap: 5px;
+}
+button {
+  background-color: #101010;
+  color: white;
+  height: 40px;
+  width: 160px;
+  font-size: 20px;
+  margin-top: 20px;
+  text-decoration: none;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+}
+
+button:hover {
+  border: 1px solid red;
+}
+.Headline-container {
+  margin-top: 40px;
+}
+
+h1,
+h2 {
+  color: white;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 400;
+  font-size: 50px;
+}
+
+.movieLink {
+  text-decoration: none;
+  color: beige;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.movieLink:hover {
+  text-decoration: underline;
+  color: beige;
+}
+.grid-item {
+  -webkit-position: relative;
+  position: relative;
+}
+
+
+.Image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background: rgba(200, 200, 200, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s ease;
+}
+.grid-item:hover .Image-overlay {
+  opacity: 1;
+}
+
+.overlayIcons {
+  display: flex;
+  gap: 10px;
+}
+
+.bookmarkIcon {
+  font-size: 24px;
+  color: #2c2c2c;
+  transition: color 0.3s ease;
+  margin-left: 12px;
+}
+
+.bookmarkIcon:hover,
+.shareIcon:hover {
+  color: #ff0000;
+}
+.inputContainer {
+  
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+.input {
+  width: 300px;
+  height: 40px;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #2c2c2c;
+  background-color: black;
+  color: #101010;
+  opacity: 1;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: white;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.input::placeholder {
+  color: #2c2c2c;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.search {
+  -webkit-margin-left: 400px;
+  -webkit-margin-top: 10px;
+  -webkit-color: #2c2c2c;
+  margin-left: -24px;
+  margin-top: 10px;
+  color: #2c2c2c;
+}
+
+.goHome {
+  -webkit-display: flex;
+  -webkit-justify-content: center;
+  -webkit-margin-left: 100px;
+  display: flex;
+  justify-content: center;
+  margin-top: -15px;
+  margin-left: 800px;
+}
+
+.linkHome {
+  text-decoration: none;
+  color: white;
+}
+
+.bookmarks {
+  text-decoration: none;
+  margin-left: 30px;
+  color: white;
+}
+
+.Bookmarks {
+  margin-top: 150px;
+  color: white;
+}
+
+.fixed-icons {
+  color: white;
+  background-color: black;
+  height: 60px;
+  width: 700px;
+  position: fixed;
+  z-index: 1000;
+  /*position:fixed;
+  z-index:1000;*/
+}
+.trash {
+  margin-top: 20px;
+  margin-left: 160px;
+  cursor: pointer;
+}
+
+.clearAll {
+  margin-top: -40px;
+  margin-left: 800px;
+  top: 40px;
+  font-size: 50px;
+
+  cursor: pointer;
+}
+
+.clearAll:hover {
+  color: red;
+}
+
+.return {
+  margin-top: 20px;
+  font-size: 50px;
+  color: white;
+  margin-left: 60px;
+}
+.NavBookmark {
+  background-color: black;
+  z-index: 1000;
+  width: 100%;
+  position: fixed;
+  height: 80px;
+  margin-top: -60px;
+}
+
+.return:hover {
+  color: red;
+}
+
+.nav-input-search {
+  position: fixed;
+  margin-top: -200px;
+  z-index: 1000;
+  background-color: black;
+  width: 1500px;
+  margin-left: -200px;
+  height: 120px;
+}
+
+.movie {
+  z-index: 999;
+}
+
+.bookmarkContainer {
+  padding-top: 60px;
+  z-index: 900;
+}
+
+
+
+
+@media only screen and (max-width: 600px) and (min-width: 280px) {
+  .grid-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .bookmarkIcon {
+    font-size: 24px;
+    color: #2c2c2c;
+    transition: color 0.3s ease;
+    margin-left: 300px;
+    margin-top: -40px;
+  }
+
+  .fixed-icons {
+    width: 100px;
+  }
+
+  .return {
+  }
+
+  .movietitle {
+    margin-left: 100px;
+    margin-top: 10px;
+  }
+  .goHome {
+    margin-top: -32px;
+    margin-left: 360px;
+  }
+
+  .clearAll {
+    margin-left: 100px;
+  }
+
+  .nav-input-search {
+    margin-left: -600px;
+    background-color: black;
+    height: 120px;
+  }
+}
+
+@supports(-ms-accelerator: true) {
+  .grid-container{
+    margin-left: -700px;
+  }
+  
+}
