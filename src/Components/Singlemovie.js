@@ -7,7 +7,7 @@ function Singlemovie() {
   const urlSlug = useParams();
   const urlParams = new URLSearchParams(window.location.search)
   const from = urlParams.get('from');
-  const baseUrl = `https://mymovieapplication-1ecd9fc8f5ab.herokuapp.com/api/movies/${urlSlug.slug}`;
+  const baseUrl = `https://servermikiflix-7.onrender.com/api/movies/${urlSlug.slug}`;
 
   useEffect(() => {
     const fetchData = async () => {
