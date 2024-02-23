@@ -27,7 +27,7 @@ function Signup() {
     e.preventDefault();
     setLoading(true);
     try {
-      const response = await fetch("https://mymovieapplication-1ecd9fc8f5ab.herokuapp.com/register", {
+      const response = await fetch("https://servermikiflix-7.onrender.com/register", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -56,7 +56,7 @@ function Signup() {
       const userData = { googleId, email, name };
 
       const serverResponse = await fetch(
-        "https://mymovieapplication-1ecd9fc8f5ab.herokuapp.com/auth/google/callback",
+        "https://servermikiflix-7.onrender.com/auth/google/callback",
         {
           method: "POST",
           headers: {
