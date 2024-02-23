@@ -24,7 +24,7 @@ function Login() {
     setIsloading(true);
 
     try {
-      const response = await fetch("https://mymovieapplication-1ecd9fc8f5ab.herokuapp.com/login", {
+      const response = await fetch("https://servermikiflix-7.onrender.com/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -71,7 +71,7 @@ function Login() {
       const userData = { googleId, email, name };
 
       const serverResponse = await fetch(
-        "https://mymovieapplication-1ecd9fc8f5ab.herokuapp.com/auth/google/callback",
+        "https://servermikiflix-7.onrender.com/auth/google/callback",
         {
           method: "POST",
           headers: {
