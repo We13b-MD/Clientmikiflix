@@ -9,20 +9,20 @@ import movieObject from "./movielist";
 function Movies({ movie }) {
   const { addBookmark } = useSharecontext();
   const navigate = useNavigate();
-  const baseUrl = "https://servermikiflix-7.onrender.com/api/movies/";
+ 
   const [searchQuery, setSearchQuery] = useState("");
   const [searchResults, setSearchResults] = useState([]);
-  const [data, setData] = useState({});
+ 
   const [movies, setMovies] = useState([]);
   const [isloading, setIsloading] = useState(true);
-  const [error, setError] = useState(null);
+  
   const [userId, setUserId] = useState("659b1cb5f76943aa56002185");
-  const [movieId, setmovieId] = useState([]);
+ 
 
   const [bookmarkItem, setbookmarkItem] = useState(
     Array.isArray(movieObject) ? movieObject : []
   );
-  const [bookmarks, setbookmarks] = useState(0);
+ 
 
   // Search functionality
   const handleSearch = async (e) => {
