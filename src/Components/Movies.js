@@ -30,8 +30,12 @@ function Movies({ movie }) {
       const response = await fetch(
         `https://servermikiflix-7.onrender.com/api/movies/search?q=${searchQuery}`
       );
-      setSearchResults(response.data);
-      if (response.data.length > 0) {
+      if(!response.ok){
+        throw new Error("Failed to retrieve search results")
+      }
+      const searchData = await response.json();
+      setSearchResults(searchData);
+      if (searchData.length > 0) {
         const firstMovie = response.data[0];
         navigate(`/movies/${firstMovie.slug}`);
       } else {
