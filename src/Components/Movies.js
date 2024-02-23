@@ -12,10 +12,10 @@ function Movies({ movie }) {
  
   const [searchQuery, setSearchQuery] = useState("");
   const [searchResults, setSearchResults] = useState([]);
- 
+  const [error, setError] = useState(null);
   const [movies, setMovies] = useState([]);
   const [isloading, setIsloading] = useState(true);
-  
+   const [bookmarks, setbookmarks] = useState(0);
   const [userId, setUserId] = useState("659b1cb5f76943aa56002185");
  
 
