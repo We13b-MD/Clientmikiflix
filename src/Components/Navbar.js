@@ -1,14 +1,13 @@
 import { Link, NavLink } from "react-router-dom";
-import { FaSearch } from "react-icons/fa";
 import "../Cssfiles/Navbar.css";
 import { useUser } from "../CreateContext/userContext";
-import React, { useState, useEffect } from "react";
-import { FaSignOutAlt, FaTimes, FaBars } from "react-icons/fa";
+import React, { useState } from "react";
+import {  FaTimes, FaBars } from "react-icons/fa";
 
 function Navbar() {
   const [clicked, setClicked] = useState(false);
 
-  const { username, setUser, logout, isAuthenticated, isLoggedIn } = useUser();
+  const { username, setUser, logout, isAuthenticated } = useUser();
   const storedUsername = localStorage.getItem("username");
   function handleClick() {
     setClicked(!clicked);
