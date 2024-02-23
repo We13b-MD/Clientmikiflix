@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { FaShare, FaBookmark, FaSearch } from "react-icons/fa";
-import 'normalize.css';
 import "../Cssfiles/movie.css";
 import { useSharecontext } from "../CreateContext/SharedContext";
 import { jwtDecode } from "jwt-decode";
@@ -10,7 +9,7 @@ import movieObject from "./movielist";
 function Movies({ movie }) {
   const { addBookmark } = useSharecontext();
   const navigate = useNavigate();
-  const baseUrl = "https://mymovieapplication-1ecd9fc8f5ab.herokuapp.com/api/movies/";
+  const baseUrl = "https://servermikiflix-7.onrender.com/api/movies/";
   const [searchQuery, setSearchQuery] = useState("");
   const [searchResults, setSearchResults] = useState([]);
   const [data, setData] = useState({});
@@ -29,7 +28,7 @@ function Movies({ movie }) {
   const handleSearch = async (e) => {
     try {
       const response = await fetch(
-        `https://mymovieapplication-1ecd9fc8f5ab.herokuapp.com/api/movies/search?q=${searchQuery}`
+        `https://servermikiflix-7.onrender.com/api/movies/search?q=${searchQuery}`
       );
       setSearchResults(response.data);
       if (response.data.length > 0) {
@@ -50,7 +49,7 @@ function Movies({ movie }) {
   }
 
   useEffect(() => {
-    fetch("https://mymovieapplication-1ecd9fc8f5ab.herokuapp.com/api/movies")
+    fetch("https://servermikiflix-7.onrender.com/api/movies")
       .then((response) => {
         if (!response.ok) {
           throw new Error("Data fetching failed");
